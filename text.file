@@ -1,0 +1,26 @@
+//Ayesha Akhter
+WarmUp Puzzle:  The Harmless Ransom Note 
+
+Given two strings,
+ransomNote and magazine, return true if ransomNote can be constructed from magazine and false otherwise. Each letter in the magazine can only be used once in ransomNote.
+
+Solution: 
+Given,
+Two strings: ransomNote & magazine
+if the magazine has the string: [followmejack]
+And the ransomNote has the string: [wolf]
+
+I can check to see if the letters exist in the magazine string, and make sure it's only being used once like once the first "l" is used fromfollowmejack, it cannot be used again from followmejack to construct the word "wolf" but the second "l" in followmwjack can be used for the second "l" in “wolf” (edited).
+
+=> set up boolean function: lettersEx ( ransomNote , magazine) takes in 2 strings as parameters
+
+a. Iterate through magazine string characters
+b. For each character in the magazine, compare to the ransomNote
+c. If the letter is found in the ransom note string, remove it 
+d. Move on to the next character in the magazine, repeat steps b & c
+
+e. Else (letter from ransom note is not in not in the magazine)
+	exit for loop and return false for boolean function 
+
+f. Otherwise (every letter in ransomNote was found in the magazine, and subsequently removed from the magazine)
+then return true for lettersEx//
